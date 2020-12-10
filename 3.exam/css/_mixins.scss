@@ -1,0 +1,47 @@
+//Fonts
+@mixin main-font {
+    font-family: $main-font;
+    color: $main-font-color;
+}
+
+@mixin sec-font {
+    font-family: $sec-font;
+    color: $sec-font-color;
+}
+
+//Other 
+@mixin shadow {
+    border-radius: 10px;
+    box-shadow: 7px 7px 15px darken($main-color, 100%);
+}
+
+@mixin form {
+    @include shadow;
+    background-color: darken($main-color, 2%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+@mixin button {
+    @include main-font;
+    background-color: $sec-color;
+    border:1px solid darken($sec-color, 25%);
+    border-radius: 5px;
+    padding: 6px 9px;
+}
+
+@mixin error {
+    color:$sec-color;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top:10px;
+    padding-right: 10px;
+}
+
+@mixin game-title {
+    font-family: $game-font;
+    color: $sec-color;
+}

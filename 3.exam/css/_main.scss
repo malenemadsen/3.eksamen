@@ -1,0 +1,126 @@
+body{
+    background-color: $main-color;
+    @include main-font;
+}
+a{
+    color:$third-color;
+    &:hover{
+        color: darken($third-color,30%);
+        text-decoration: none;
+    }
+}
+.navbar{ 
+    background-color: darken($main-color, 100%);
+    padding: 10px 15px;
+    img{
+        width: 65%;
+    }  
+    .ul{
+        text-align: right;
+    }
+}
+
+.login-form{
+    @include form;
+    .section-1{
+        margin: auto;
+        padding: 4% 0%;
+        img{
+            width: 100%;
+            padding: 4%;
+        }
+    }
+    .section-2{
+        border-left: $border;
+        margin: 20px 0px;
+        padding: 4% 0% 4% 9%;
+        .form-control{
+             background-color: darken($main-color, 1%);
+             @include sec-font;
+             border: $border;
+             width: 80%;
+         }
+        .submit{
+            @include button;
+            &:hover{
+                background-color: lighten($sec-color, 10%);
+            }
+        }
+        p{
+            padding-top:3px;
+            font-size: 14px;
+        }
+        .error{
+            @include error;
+        }
+    }  
+}
+
+.game-info{
+    @include form;
+    border: $border;
+    padding: 20px;
+    width: 50%;
+    line-height: 22px;
+    font-size:16px;
+    .title{
+        @include game-title;
+        font-size: 60px;
+        text-align: center;
+    }
+    .small-heading{
+        font-weight: bolder;
+        color:$sec-color;
+    }
+    .play{
+        @include button;
+        width: 100px;
+        text-align: center;
+        margin: auto;
+    }
+}
+.center{
+    text-align: center;
+    .log-in{
+        font-size:30px;
+    }
+}
+.game{
+    color:$main-font-color;
+    margin-top: 40px;
+    font-family: $main-font;
+    b{
+        color:$sec-color;
+    }
+    .title{
+        @include game-title;
+        font-size: 35px;
+    }
+    p{
+        line-height: 25px;
+        font-size: 15px;
+    }
+    .moves{
+        font-size:40px;
+        line-height: 40px;
+        text-align: center;
+        border:$border;
+        padding: 20px;
+        #moves{
+            font-size:70px; 
+            font-family: $game-font;
+            color:$sec-color;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 576px){
+    .login-form{
+        padding: 10px 35px;
+        .section-2{
+            border:none;
+            border-top: $border;
+        }  
+    }
+}
