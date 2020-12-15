@@ -118,7 +118,7 @@ if (empty($username) || empty($pwd)) { //tjekker om nogle af felterne er tomme (
 }
 //Funktion der tjkekker om du har en bruger
 function loginUser($conn, $username, $pwd) {
-    $uidExists = uidExists($conn, $username, $username);//se vidoen igen 1:39:15
+    $uidExists = uidExists($conn, $username, $username);
 
     if($uidExists === false) {
         header("location:../index.php?error=wronglogin");
